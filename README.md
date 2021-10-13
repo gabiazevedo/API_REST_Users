@@ -77,7 +77,7 @@ Existe uma terceira possibilidade: usar um comando chamado [httpie](https://http
 
 - Apliquei a validação dos dados de entrada (IN) da API com a biblioteca Joi.
 - Implementei o parseamento do campo id para melhor leitura dos dados.
-- O "lastAccess" cria e atualiza a data de ultimo acesso com a data corrente e de maneira dinâmica.
+- O "lastAccess" cria e atualiza a data de último acesso com a data corrente e de maneira dinâmica.
 
 ## Próximas implementações 💯
 
