@@ -41,6 +41,27 @@ DB_NAME=user_info
 
 5. As instruções para popular o banco de dados estão no arquivo `userDataBase.js`.
 
+## Testando as requisições 🔌
+
+Para testar a aplicação, basta fazer uma requisição usando o próprio navegador, colocando a URL http://localhost:3001/user (Verbo GET para trazer todos os usuários cadastrados no banco de dados). Porém como nem todo tipo de requisição HTTP pode ser feita diretamente pelo navegador, é recomendado utilizar algum cliente HTTP. Os mais famosos são o [Postman](https://www.postman.com/) e o [Insomnia](https://insomnia.rest/).
+
+Existe uma terceira possibilidade: usar um comando chamado [httpie](https://httpie.io/) que permite fazer uma requisição direto pelo terminal. Para instalar o HTTPie basta rodar `sudo apt install httpie` no terminal. Com o httpie instalado basta usar os comandos abaixo para testar as rotas.
+
+#### - GET /user - Rota que faz a leitura de todos os dados disponíveis no banco
+
+`http GET :3000/user`
+
+#### - GET /user/:id - Rota que busca o usuário pelo seu identificador único
+
+`http GET :3000/user/6165d147d38ed41b25e3fa10`
+
+#### - POST /user - Rota que cria um novo usuário - O campo lastAccess é criado dinâmicamente, introduzindo no banco de dados a _current date_ como data de último acesso.
+
+`http POST :3000/user/ name='Gabriela Azevedo' userName='gabiazevedo' password='123adbgfc'`
+
+#### - PUT /user/:id - Rota que atualiza as informações de usuário retornando 
+
+
 ## Detalhes do desenvolvimento 👩‍💻
 
 - Usei o conceito de Arquitetura de Software (MSC) - Model Service Controller.
