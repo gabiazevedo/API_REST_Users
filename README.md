@@ -65,7 +65,7 @@ Existe uma terceira possibilidade: usar um comando chamado [httpie](https://http
 
 #### - DELETE /user/:id - Rota que deleta o usuário de acordo com o ID selecionado
 
-`http DELETE :3000/user/6165d147d38ed41b25e3fa15
+`http DELETE :3000/user/6165d147d38ed41b25e3fa15`
 
 ## Detalhes do desenvolvimento 👩‍💻
 
