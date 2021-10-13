@@ -43,7 +43,7 @@ DB_NAME=user_info
 
 ## Testando as requisições 🔌
 
-Para testar a aplicação, basta fazer uma requisição usando o próprio navegador, colocando a URL http://localhost:3001/user (Verbo GET para trazer todos os usuários cadastrados no banco de dados). Porém como nem todo tipo de requisição HTTP pode ser feita diretamente pelo navegador, é recomendado utilizar algum cliente HTTP. Os mais famosos são o [Postman](https://www.postman.com/) e o [Insomnia](https://insomnia.rest/).
+Para testar a aplicação, basta fazer uma requisição usando o próprio navegador, colocando a URL http://localhost:3000/user (Verbo GET para trazer todos os usuários cadastrados no banco de dados). Porém como nem todo tipo de requisição HTTP pode ser feita diretamente pelo navegador, é recomendado utilizar algum cliente HTTP. Os mais famosos são o [Postman](https://www.postman.com/) e o [Insomnia](https://insomnia.rest/).
 
 Existe uma terceira possibilidade: usar um comando chamado [httpie](https://httpie.io/) que permite fazer uma requisição direto pelo terminal. Para instalar o HTTPie basta rodar `sudo apt install httpie` no terminal. Com o httpie instalado basta usar os comandos abaixo para testar as rotas.
 
