@@ -59,8 +59,13 @@ Existe uma terceira possibilidade: usar um comando chamado [httpie](https://http
 
 `http POST :3000/user/ name='Gabriela Azevedo' userName='gabiazevedo' password='123adbgfc'`
 
-#### - PUT /user/:id - Rota que atualiza as informações de usuário retornando 
+#### - PUT /user/:id - Rota que atualiza as informações do usuário filtrado pelo ID retornando o documento atualizado no banco de dados.
 
+`http PUT :3000/user/6165d147d38ed41b25e3fa10 name='Robert C. Martin' userName='clean_code' password='Rob2021'`
+
+#### - DELETE /user/:id - Rota que deleta o usuário de acordo com o ID selecionado
+
+`http DELETE :3000/user/6165d147d38ed41b25e3fa15
 
 ## Detalhes do desenvolvimento 👩‍💻
 
