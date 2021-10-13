@@ -9,10 +9,10 @@ usuários de um suposto sistema e uma API para interação com esses dados.</br>
 
 ### A API deve conter 4 (quatro) rotas:
 
-- [x] _Create_
-- [x] _Read_
-- [x] _Update_
-- [x] _Delete_
+- [x] - POST - _Create_
+- [x] - GET - _Read_
+- [x] - PUT - _Update_ 
+- [x] - DELETE - _Delete_
 
 ### Requisitos
 
@@ -20,6 +20,7 @@ usuários de um suposto sistema e uma API para interação com esses dados.</br>
 - [x] _A API deve ser desenvolvida utilizando Node.js._
 - [x] _O projeto deve ser enviado junto de um arquivo README com explicações sobre como
 executar o mesmo._
+- [X] _Utilizar o padrão REST para o desenvolvimento da API._
 
 ## Orientações para start da aplicação 📋
 
