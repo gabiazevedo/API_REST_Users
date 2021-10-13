@@ -29,8 +29,8 @@ const updateUser = async (id, { name, userName, password }) => {
       const newData = { name, userName, password, lastAccess };
 
     return db.collection('users')
-      .findOneAndUpdate({ _id: userId }, { $set: newData }, { returnNewDocument: true })
-      .then((result) => result.value);
+      .findOneAndUpdate({ _id: userId }, { $set: newData }, { returnOriginal: false })
+      .then((result) => ({ ...newData, _id: result.value._id }));
   });
   return updateUser;
 };
