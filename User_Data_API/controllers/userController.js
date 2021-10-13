@@ -33,6 +33,14 @@ const createUser = rescue(async (req, res, next) => {
 });
 
 const updateUser = rescue(async (req, res, next) => {
+  
+  const { error } = Joi.object({
+    name: Joi.string().min(3).not().empty().required(),
+    userName: Joi.string().min(5).not().empty().required(),
+  }).validate(req.body);
+
+  if (error) return next(error);
+
   const { id } = req.params;
   const { name, userName } = req.body;
   const userUpdated = await userServices.updateUser(id, { name, userName });
@@ -46,7 +54,7 @@ const deleteUser = rescue(async (req, res) => {
   const { id } = req.params;
   const deletedUser = await userServices.deleteUser(id);
   
-  res.status(200).json(deletedUser);
+  res.status(204).json(deletedUser);
 });
 
 module.exports = { getAllUsers, findUser, createUser, updateUser, deleteUser };

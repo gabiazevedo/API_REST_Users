@@ -24,8 +24,8 @@ const createUser = async (_id, name, userName, lastAccess, password) => {
   return formatUser(createdUser);
 };
 
-const updateUser = async (id, { name, userName }) => {
-  const updatedUser = await userModel.updateUser(id, { name, userName });
+const updateUser = async (id, { name, userName, lastAccess }) => {
+  const updatedUser = await userModel.updateUser(id, { name, userName, lastAccess });
   return formatUser(updatedUser);
 };
 

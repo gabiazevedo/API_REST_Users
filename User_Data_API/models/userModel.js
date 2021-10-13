@@ -21,7 +21,8 @@ const createUser = async (_id, name, userName, lastAccess) => {
     return newUser;
 };
 
-const updateUser = async (id, { name, userName, password, lastAccess }) => {
+const updateUser = async (id, { name, userName, password }) => {
+  const lastAccess = new Date();
   const updateUser = await connection()
     .then((db) => {
       const userId = new ObjectId(id);
